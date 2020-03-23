@@ -17,6 +17,9 @@ class Scraper
     # end
   end
 
+  def get_courses
+    self.get_page.css(".post")
+
   def print_courses
     self.make_courses
     Course.all.each do |course|
